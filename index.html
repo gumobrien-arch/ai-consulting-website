@@ -946,5 +946,52 @@
   <p>© 2026 <strong>Gum Obrien AI Consulting</strong>. All rights reserved.</p>
 </footer>
 
+<!-- VISITOR COUNTER -->
+<div id="visit-counter" style="
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  background: rgba(15,23,42,0.82);
+  border: 1px solid rgba(99,102,241,0.35);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem 0.35rem 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-family: inherit;
+  user-select: none;
+  transition: opacity 0.2s;
+">
+  <span style="font-size:0.85rem; line-height:1;">👁</span>
+  <span id="visit-label" style="color:#e2e8f0; font-weight:600; letter-spacing:0.01em;">—</span>
+  <span style="color:#64748b;">visits</span>
+</div>
+<script>
+  (function() {
+    var img = new Image();
+    img.src = "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgumobrien-arch.github.io%2Fai-consulting-website%2F&count_bg=%236366F1&title_bg=%230F172A&icon=eye.svg&icon_color=%23E7E7E7&title=visits&edge_flat=false";
+    // Fetch the count as JSON from the hits API
+    fetch("https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgumobrien-arch.github.io%2Fai-consulting-website%2F&format=json")
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        var total = d && d.count && d.count.total ? d.count.total : null;
+        if (total) {
+          document.getElementById("visit-label").textContent = Number(total).toLocaleString();
+        }
+      })
+      .catch(function(){
+        // fallback: hide if API fails
+        var el = document.getElementById("visit-counter");
+        if(el) el.style.opacity = "0.4";
+      });
+  })();
+</script>
+
 </body>
 </html>
