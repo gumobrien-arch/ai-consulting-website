@@ -239,6 +239,77 @@
     }
     .quote-author { font-size: 0.85rem; color: var(--muted); }
 
+    /* CASE STUDY */
+    .case-study-bg {
+      background: var(--primary);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .case-study-spotlight {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px; overflow: hidden; margin-top: 3.5rem;
+    }
+    .cs-header {
+      background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(16,185,129,0.1));
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    }
+    .cs-tag {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--accent-light);
+      background: rgba(99,102,241,0.15); border: 1px solid rgba(99,102,241,0.25);
+      padding: 0.3rem 0.75rem; border-radius: 999px;
+    }
+    .cs-company { font-size: 1.3rem; font-weight: 800; color: var(--white); margin-top: 0.35rem; }
+    .cs-industry { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+    .cs-outcomes {
+      display: flex; gap: 2rem; flex-wrap: wrap;
+    }
+    .cs-outcome { text-align: center; }
+    .cs-outcome-num {
+      font-size: 2rem; font-weight: 800; color: var(--green); letter-spacing: -0.03em;
+    }
+    .cs-outcome-label { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
+    .cs-body { padding: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    @media (max-width: 720px) { .cs-body { grid-template-columns: 1fr; } }
+    .cs-col-title {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--accent-light); margin-bottom: 1rem;
+    }
+    .cs-problem p { font-size: 0.95rem; color: var(--muted); line-height: 1.75; }
+    .cs-solution-list { display: flex; flex-direction: column; gap: 0.85rem; }
+    .cs-solution-item {
+      display: flex; gap: 0.75rem; align-items: flex-start;
+    }
+    .cs-solution-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent); flex-shrink: 0; margin-top: 0.45rem;
+    }
+    .cs-solution-item p { font-size: 0.92rem; color: var(--muted); line-height: 1.6; }
+    .cs-solution-item strong { color: var(--text); }
+    .cs-quote {
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex; gap: 1.5rem; align-items: flex-start;
+    }
+    .cs-quote-mark { font-size: 3rem; color: var(--accent); line-height: 1; flex-shrink: 0; font-family: Georgia, serif; }
+    .cs-quote-text { font-size: 1rem; font-style: italic; color: var(--text); line-height: 1.65; }
+    .cs-quote-author { font-size: 0.82rem; color: var(--muted); margin-top: 0.5rem; }
+
+    /* mini case studies row */
+    .mini-cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+    .mini-case {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.5rem;
+    }
+    .mini-case-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .mini-case-icon { font-size: 1.4rem; }
+    .mini-case-name { font-size: 0.95rem; font-weight: 700; color: var(--white); }
+    .mini-case-sector { font-size: 0.75rem; color: var(--muted); }
+    .mini-case-stat { font-size: 1.6rem; font-weight: 800; color: var(--green); margin-bottom: 0.3rem; }
+    .mini-case-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.55; }
+
     /* CTA SECTION */
     .cta-section {
       text-align: center;
@@ -286,6 +357,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
     <li><a href="#why-us">Why Us</a></li>
+    <li><a href="#results">Results</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Book a Free Call</a>
@@ -524,6 +596,115 @@
     <div class="quote-author">— Gum Obrien, AI Consultant</div>
   </div>
 </section>
+
+<!-- CASE STUDY -->
+<div class="case-study-bg">
+<section id="results">
+  <div class="section-label">Results in Action</div>
+  <h2 class="section-title">What This Looks Like for a Real Business</h2>
+  <p class="section-sub">Here's a real-world example of the kind of transformation AI consulting delivers — across the exact areas that drain most small and mid-size businesses.</p>
+
+  <!-- SPOTLIGHT CASE STUDY -->
+  <div class="case-study-spotlight">
+    <div class="cs-header">
+      <div>
+        <div class="cs-tag">Case Study</div>
+        <div class="cs-company">Meridian Property Group</div>
+        <div class="cs-industry">Real Estate Management &mdash; 12 employees, $4M annual revenue</div>
+      </div>
+      <div class="cs-outcomes">
+        <div class="cs-outcome">
+          <div class="cs-outcome-num">28 hrs</div>
+          <div class="cs-outcome-label">Saved per week</div>
+        </div>
+        <div class="cs-outcome">
+          <div class="cs-outcome-num">$62K</div>
+          <div class="cs-outcome-label">Annual cost savings</div>
+        </div>
+        <div class="cs-outcome">
+          <div class="cs-outcome-num">6 weeks</div>
+          <div class="cs-outcome-label">To full deployment</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-body">
+      <div class="cs-problem">
+        <div class="cs-col-title">The Problem</div>
+        <p>
+          Meridian's office manager was spending nearly <strong style="color: var(--text)">3 full days per week</strong> on manual tasks: pulling rent payment data into spreadsheets, answering the same tenant inquiries over email, scheduling maintenance visits back-and-forth, and compiling monthly financial reports for the owners by hand. Their team was overwhelmed, response times were slow, and the owners had no real-time visibility into the business's financial health.
+        </p>
+      </div>
+      <div class="cs-solution">
+        <div class="cs-col-title">What We Built</div>
+        <div class="cs-solution-list">
+          <div class="cs-solution-item">
+            <div class="cs-solution-dot"></div>
+            <p><strong>Automated financial reporting</strong> — a live dashboard pulling from their property management software, generating owner reports every Monday at 8am with zero manual work.</p>
+          </div>
+          <div class="cs-solution-item">
+            <div class="cs-solution-dot"></div>
+            <p><strong>AI tenant support bot</strong> — trained on their lease terms, policies, and FAQs. Handles 80% of tenant inquiries instantly, 24/7. Complex issues escalate to staff automatically.</p>
+          </div>
+          <div class="cs-solution-item">
+            <div class="cs-solution-dot"></div>
+            <p><strong>Smart maintenance scheduling</strong> — tenants submit requests via a form; the system auto-assigns contractors, books time slots, and sends confirmations without staff involvement.</p>
+          </div>
+          <div class="cs-solution-item">
+            <div class="cs-solution-dot"></div>
+            <p><strong>Automated rent arrears workflow</strong> — detects overdue payments and sends escalating reminder sequences, eliminating the manual follow-up process entirely.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-quote">
+      <div class="cs-quote-mark">&ldquo;</div>
+      <div>
+        <div class="cs-quote-text">We went from spending half our week on admin to actually managing and growing the portfolio. The financial reports alone saved us hours every month — and now we actually know our numbers in real time. I wish we'd done this two years ago.</div>
+        <div class="cs-quote-author">— Sarah T., Operations Manager, Meridian Property Group</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MINI CASE STUDIES -->
+  <div class="mini-cases">
+    <div class="mini-case">
+      <div class="mini-case-header">
+        <div class="mini-case-icon">🛍️</div>
+        <div>
+          <div class="mini-case-name">Brightline Retail</div>
+          <div class="mini-case-sector">E-commerce &middot; 8 staff</div>
+        </div>
+      </div>
+      <div class="mini-case-stat">91% faster</div>
+      <div class="mini-case-desc">Customer support response time dropped from 6 hours to under 30 minutes after deploying an AI inbox triage and auto-response system trained on their product catalog.</div>
+    </div>
+    <div class="mini-case">
+      <div class="mini-case-header">
+        <div class="mini-case-icon">⚖️</div>
+        <div>
+          <div class="mini-case-name">Harwick Legal LLP</div>
+          <div class="mini-case-sector">Professional Services &middot; 15 staff</div>
+        </div>
+      </div>
+      <div class="mini-case-stat">$38K saved</div>
+      <div class="mini-case-desc">Automated document intake, client scheduling, and billing reconciliation eliminated 20+ hours of paralegal admin work per week — the equivalent of a part-time hire.</div>
+    </div>
+    <div class="mini-case">
+      <div class="mini-case-header">
+        <div class="mini-case-icon">🏗️</div>
+        <div>
+          <div class="mini-case-name">Crest Building Co.</div>
+          <div class="mini-case-sector">Construction &middot; 22 staff</div>
+        </div>
+      </div>
+      <div class="mini-case-stat">Zero missed</div>
+      <div class="mini-case-desc">Automated job scheduling, subcontractor coordination, and invoice reminders eliminated missed deadlines and late payments — saving an estimated 15 hours per week in project admin.</div>
+    </div>
+  </div>
+</section>
+</div>
 
 <!-- CTA -->
 <div class="cta-section" id="contact">
