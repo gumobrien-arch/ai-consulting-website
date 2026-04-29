@@ -303,7 +303,7 @@
     .cs-quote-text { font-size: 1rem; font-style: italic; color: var(--text); line-height: 1.65; }
     .cs-quote-author { font-size: 0.82rem; color: var(--muted); margin-top: 0.5rem; }
 
-    /* mini case studies row */
+    /* mini case studies row (kept for fallback) */
     .mini-cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
     .mini-case {
       background: var(--card-bg); border: 1px solid var(--border);
@@ -315,6 +315,18 @@
     .mini-case-sector { font-size: 0.75rem; color: var(--muted); }
     .mini-case-stat { font-size: 1.6rem; font-weight: 800; color: var(--green); margin-bottom: 0.3rem; }
     .mini-case-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.55; }
+
+    /* demo walkthrough cards */
+    .demo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+    .demo-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem; display: flex; flex-direction: column; gap: 1.25rem; }
+    .demo-card-header { display: flex; align-items: flex-start; gap: 1rem; }
+    .demo-icon { font-size: 1.75rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .demo-service { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
+    .demo-scenario { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+    .demo-steps { display: flex; flex-direction: column; gap: 0.6rem; }
+    .demo-step { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.83rem; color: var(--muted); line-height: 1.55; }
+    .demo-step-num { background: rgba(99,102,241,0.18); color: #a5b4fc; font-size: 0.72rem; font-weight: 700; border-radius: 50%; width: 1.4rem; height: 1.4rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; }
+    .demo-result { font-size: 0.83rem; color: var(--green); font-weight: 600; padding-top: 0.5rem; border-top: 1px solid var(--border); line-height: 1.5; }
 
     /* CONTACT SECTION */
     .contact-section {
@@ -644,108 +656,120 @@
 <!-- CASE STUDY -->
 <div class="case-study-bg">
 <section id="results">
-  <div class="section-label">Results in Action</div>
-  <h2 class="section-title">What This Looks Like for a Real Business</h2>
-  <p class="section-sub">Here's a real-world example of the kind of transformation AI consulting delivers — across the exact areas that drain most small and mid-size businesses.</p>
+  <div class="section-label">How It Works in Practice</div>
+  <h2 class="section-title">See Each Service in Action</h2>
+  <p class="section-sub">Real scenarios showing exactly how each service works &mdash; from the moment a problem exists to the moment it&#39;s solved automatically.</p>
 
-  <!-- SPOTLIGHT CASE STUDY -->
-  <div class="case-study-spotlight">
-    <div class="cs-header">
-      <div>
-        <div class="cs-tag">Case Study</div>
-        <div class="cs-company">Meridian Property Group</div>
-        <div class="cs-industry">Real Estate Management &mdash; 12 employees, $4M annual revenue</div>
-      </div>
-      <div class="cs-outcomes">
-        <div class="cs-outcome">
-          <div class="cs-outcome-num">28 hrs</div>
-          <div class="cs-outcome-label">Saved per week</div>
-        </div>
-        <div class="cs-outcome">
-          <div class="cs-outcome-num">$62K</div>
-          <div class="cs-outcome-label">Annual cost savings</div>
-        </div>
-        <div class="cs-outcome">
-          <div class="cs-outcome-num">6 weeks</div>
-          <div class="cs-outcome-label">To full deployment</div>
-        </div>
-      </div>
-    </div>
+  <div class="demo-grid">
 
-    <div class="cs-body">
-      <div class="cs-problem">
-        <div class="cs-col-title">The Problem</div>
-        <p>
-          Meridian's office manager was spending nearly <strong style="color: var(--text)">3 full days per week</strong> on manual tasks: pulling rent payment data into spreadsheets, answering the same tenant inquiries over email, scheduling maintenance visits back-and-forth, and compiling monthly financial reports for the owners by hand. Their team was overwhelmed, response times were slow, and the owners had no real-time visibility into the business's financial health.
-        </p>
-      </div>
-      <div class="cs-solution">
-        <div class="cs-col-title">What We Built</div>
-        <div class="cs-solution-list">
-          <div class="cs-solution-item">
-            <div class="cs-solution-dot"></div>
-            <p><strong>Automated financial reporting</strong> — a live dashboard pulling from their property management software, generating owner reports every Monday at 8am with zero manual work.</p>
-          </div>
-          <div class="cs-solution-item">
-            <div class="cs-solution-dot"></div>
-            <p><strong>AI tenant support bot</strong> — trained on their lease terms, policies, and FAQs. Handles 80% of tenant inquiries instantly, 24/7. Complex issues escalate to staff automatically.</p>
-          </div>
-          <div class="cs-solution-item">
-            <div class="cs-solution-dot"></div>
-            <p><strong>Smart maintenance scheduling</strong> — tenants submit requests via a form; the system auto-assigns contractors, books time slots, and sends confirmations without staff involvement.</p>
-          </div>
-          <div class="cs-solution-item">
-            <div class="cs-solution-dot"></div>
-            <p><strong>Automated rent arrears workflow</strong> — detects overdue payments and sends escalating reminder sequences, eliminating the manual follow-up process entirely.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cs-quote">
-      <div class="cs-quote-mark">&ldquo;</div>
-      <div>
-        <div class="cs-quote-text">We went from spending half our week on admin to actually managing and growing the portfolio. The financial reports alone saved us hours every month — and now we actually know our numbers in real time. I wish we'd done this two years ago.</div>
-        <div class="cs-quote-author">— Sarah T., Operations Manager, Meridian Property Group</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MINI CASE STUDIES -->
-  <div class="mini-cases">
-    <div class="mini-case">
-      <div class="mini-case-header">
-        <div class="mini-case-icon">🛍️</div>
+    <!-- Workflow Automation -->
+    <div class="demo-card">
+      <div class="demo-card-header">
+        <div class="demo-icon">&#9881;&#65039;</div>
         <div>
-          <div class="mini-case-name">Brightline Retail</div>
-          <div class="mini-case-sector">E-commerce &middot; 8 staff</div>
+          <div class="demo-service">Workflow Automation</div>
+          <div class="demo-scenario">A logistics company receives 40+ purchase orders per day via email. Staff manually copy details into their inventory system, cross-check stock levels, and email supplier confirmations &mdash; taking 3+ hours daily.</div>
         </div>
       </div>
-      <div class="mini-case-stat">91% faster</div>
-      <div class="mini-case-desc">Customer support response time dropped from 6 hours to under 30 minutes after deploying an AI inbox triage and auto-response system trained on their product catalog.</div>
+      <div class="demo-steps">
+        <div class="demo-step"><span class="demo-step-num">1</span><span>Supplier email arrives &rarr; AI reads and extracts order details (SKU, quantity, delivery date) automatically</span></div>
+        <div class="demo-step"><span class="demo-step-num">2</span><span>System checks live inventory levels and flags any shortfalls before confirming</span></div>
+        <div class="demo-step"><span class="demo-step-num">3</span><span>Inventory system updated and supplier confirmation email sent &mdash; all without anyone touching it</span></div>
+        <div class="demo-step"><span class="demo-step-num">4</span><span>Edge cases (unusual orders, new suppliers) flagged for human review; everything else runs on its own</span></div>
+      </div>
+      <div class="demo-result">&#9989; Staff go from 3 hours of daily data entry to reviewing a 5-minute exception report</div>
     </div>
-    <div class="mini-case">
-      <div class="mini-case-header">
-        <div class="mini-case-icon">⚖️</div>
+
+    <!-- Smart Scheduling -->
+    <div class="demo-card">
+      <div class="demo-card-header">
+        <div class="demo-icon">&#128197;</div>
         <div>
-          <div class="mini-case-name">Harwick Legal LLP</div>
-          <div class="mini-case-sector">Professional Services &middot; 15 staff</div>
+          <div class="demo-service">Smart Scheduling</div>
+          <div class="demo-scenario">A physio clinic books 30+ appointments per day. Front desk staff spend half their day on the phone confirming times, sending reminders, and filling last-minute cancellations &mdash; while patients still no-show.</div>
         </div>
       </div>
-      <div class="mini-case-stat">$38K saved</div>
-      <div class="mini-case-desc">Automated document intake, client scheduling, and billing reconciliation eliminated 20+ hours of paralegal admin work per week — the equivalent of a part-time hire.</div>
+      <div class="demo-steps">
+        <div class="demo-step"><span class="demo-step-num">1</span><span>Patient visits booking page &rarr; sees only real available slots based on practitioner calendars and service duration</span></div>
+        <div class="demo-step"><span class="demo-step-num">2</span><span>Confirmation sent instantly via SMS and email; reminder sent 48 hours before and again 2 hours before</span></div>
+        <div class="demo-step"><span class="demo-step-num">3</span><span>Patient cancels &rarr; slot immediately reopens and waitlisted patients are notified automatically</span></div>
+        <div class="demo-step"><span class="demo-step-num">4</span><span>Weekly schedule report delivered to the owner every Monday morning with utilization rates and no-show trends</span></div>
+      </div>
+      <div class="demo-result">&#9989; Front desk handles escalations only &mdash; routine booking runs itself around the clock</div>
     </div>
-    <div class="mini-case">
-      <div class="mini-case-header">
-        <div class="mini-case-icon">🏗️</div>
+
+    <!-- Financial Reporting -->
+    <div class="demo-card">
+      <div class="demo-card-header">
+        <div class="demo-icon">&#128202;</div>
         <div>
-          <div class="mini-case-name">Crest Building Co.</div>
-          <div class="mini-case-sector">Construction &middot; 22 staff</div>
+          <div class="demo-service">Financial Reporting</div>
+          <div class="demo-scenario">A property management firm with 80 units spends 6+ hours each month manually pulling rent data, reconciling payments, and building PDF reports for property owners &mdash; using three different systems that don&#39;t talk to each other.</div>
         </div>
       </div>
-      <div class="mini-case-stat">Zero missed</div>
-      <div class="mini-case-desc">Automated job scheduling, subcontractor coordination, and invoice reminders eliminated missed deadlines and late payments — saving an estimated 15 hours per week in project admin.</div>
+      <div class="demo-steps">
+        <div class="demo-step"><span class="demo-step-num">1</span><span>Every Monday at 8am, the system pulls data from their property management software, bank feeds, and maintenance logs</span></div>
+        <div class="demo-step"><span class="demo-step-num">2</span><span>Report auto-generated: rent collected vs. expected, outstanding balances, maintenance spend, and vacancy summary</span></div>
+        <div class="demo-step"><span class="demo-step-num">3</span><span>PDF delivered to each property owner&#39;s inbox automatically &mdash; formatted, branded, no manual work</span></div>
+        <div class="demo-step"><span class="demo-step-num">4</span><span>Anomalies (large variances, overdue payments) trigger an alert to the manager before the report goes out</span></div>
+      </div>
+      <div class="demo-result">&#9989; What used to take a full day now takes zero minutes &mdash; owners get better data, faster</div>
     </div>
+
+    <!-- Customer Service Automation -->
+    <div class="demo-card">
+      <div class="demo-card-header">
+        <div class="demo-icon">&#128172;</div>
+        <div>
+          <div class="demo-service">Customer Service Automation</div>
+          <div class="demo-scenario">An e-commerce store with 500+ orders per week gets flooded with support emails: &ldquo;Where&#39;s my order?&rdquo;, &ldquo;Can I return this?&rdquo;, &ldquo;Wrong item received.&rdquo; Two staff spend their entire day responding &mdash; and still fall behind.</div>
+        </div>
+      </div>
+      <div class="demo-steps">
+        <div class="demo-step"><span class="demo-step-num">1</span><span>Customer sends support email &rarr; AI classifies the intent (order status, return, complaint, other) within seconds</span></div>
+        <div class="demo-step"><span class="demo-step-num">2</span><span>For order status queries, system looks up the order and sends a real-time tracking update automatically</span></div>
+        <div class="demo-step"><span class="demo-step-num">3</span><span>Returns get an automated reply with the policy, a pre-filled return form, and a prepaid label &mdash; no human needed</span></div>
+        <div class="demo-step"><span class="demo-step-num">4</span><span>Complex complaints or angry customers are flagged and routed to staff with full context already pulled up</span></div>
+      </div>
+      <div class="demo-result">&#9989; 80% of tickets resolved automatically; staff focus only on the cases that actually need them</div>
+    </div>
+
+    <!-- Operations Intelligence -->
+    <div class="demo-card">
+      <div class="demo-card-header">
+        <div class="demo-icon">&#128269;</div>
+        <div>
+          <div class="demo-service">Operations Intelligence</div>
+          <div class="demo-scenario">A 4-location retail chain has sales data in one system, inventory in another, and staff scheduling in a spreadsheet. The owner only finds out about problems on Friday when someone compiles a manual report &mdash; by then it&#39;s too late to act.</div>
+        </div>
+      </div>
+      <div class="demo-steps">
+        <div class="demo-step"><span class="demo-step-num">1</span><span>All data sources connected into one live dashboard: POS sales, inventory levels, staff hours, and customer footfall</span></div>
+        <div class="demo-step"><span class="demo-step-num">2</span><span>Owner opens dashboard on any device and sees real-time performance across all 4 locations at once</span></div>
+        <div class="demo-step"><span class="demo-step-num">3</span><span>Alerts fire automatically: a location running low on a top-selling item, a shift going understaffed, a revenue dip mid-week</span></div>
+        <div class="demo-step"><span class="demo-step-num">4</span><span>Weekly AI-written summary emailed to ownership with plain-language highlights and recommended actions</span></div>
+      </div>
+      <div class="demo-result">&#9989; Problems surface in hours, not days &mdash; and decisions get made with data, not gut feeling</div>
+    </div>
+
+    <!-- Custom AI Strategy -->
+    <div class="demo-card">
+      <div class="demo-card-header">
+        <div class="demo-icon">&#129504;</div>
+        <div>
+          <div class="demo-service">Custom AI Strategy</div>
+          <div class="demo-scenario">A 15-person law firm knows AI can help but doesn&#39;t know where to start. They&#39;ve heard about tools, but don&#39;t know which ones are real, what they&#39;d actually automate, or whether the ROI justifies the investment.</div>
+        </div>
+      </div>
+      <div class="demo-steps">
+        <div class="demo-step"><span class="demo-step-num">1</span><span>Discovery session maps every major workflow &mdash; intake, scheduling, billing, document prep, client communication &mdash; and identifies where time is being lost</span></div>
+        <div class="demo-step"><span class="demo-step-num">2</span><span>Each opportunity ranked by implementation effort vs. time saved; top 3 wins identified with clear ROI estimates</span></div>
+        <div class="demo-step"><span class="demo-step-num">3</span><span>Written strategy delivered: what to build, in what order, with which tools, and what to avoid &mdash; no vendor bias</span></div>
+        <div class="demo-step"><span class="demo-step-num">4</span><span>Optional: we implement the top recommendations with you, or hand off to your internal team with full documentation</span></div>
+      </div>
+      <div class="demo-result">&#9989; Firm walks away with a clear, prioritized plan &mdash; not a generic AI pitch, but a roadmap built for their practice</div>
+    </div>
+
   </div>
 </section>
 </div>
